@@ -13,6 +13,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 
+import Counter from "./components/counter";
+
+const App = () => {
+  return <Counter />;
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const element = <h1>hello world</h1>;
-root.render(element)
+root.render(<App />);
