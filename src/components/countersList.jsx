@@ -9,14 +9,15 @@ const CountersList = () => {
         { id: 3, value: 0, name: "Тарелка" },
         { id: 4, value: 0, name: "Набор минималиста" },
     ]);
-    const handleDelete = () => {
-        console.log("handleDelete");
+    const handleDelete = (id) => {
+        setCounters(counters.filter((counter) => counter.id !== id));
     };
     return (
         <>
             {counters.map((counter) => (
                 <Counter
                     key={counter.id}
+                    id={counter.id}
                     value={counter.value}
                     name={counter.name}
                     onDelete={handleDelete}
