@@ -33,7 +33,7 @@ const CountersList = ({ initialState }) => {
     };
 
     return (
-        <>
+        <div className="m-2">
             {counters.map(counter => (
                 <Counter
                     key={counter.id}
@@ -49,7 +49,7 @@ const CountersList = ({ initialState }) => {
             >
                 Сброс
             </button>
-        </>
+        </div>
     );
 };
 
