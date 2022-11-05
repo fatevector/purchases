@@ -1,8 +1,10 @@
-const Counter = (props) => {
+const Counter = props => {
     const { id, value, name, onIncrement, onDecrement, onDelete } = props;
+
     const formatValue = () => {
         return value === 0 ? "empty" : value;
     };
+
     const getBadgeClasses = () => {
         let classes = "badge m-2 ";
         classes += value === 0 ? "bg-warning " : "bg-primary ";
@@ -22,6 +24,7 @@ const Counter = (props) => {
             <button
                 className="btn btn-primary btn-sm m-2"
                 onClick={() => onDecrement(id)}
+                disabled={value <= 0}
             >
                 -
             </button>
